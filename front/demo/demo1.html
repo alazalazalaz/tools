@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>tools</title>
+	<script src="../static/vue.min.js"></script>
+</head>
+<body>
+
+<div id="vue_det">
+	<h1>基本的数据绑定修改，点击方法绑定</h1>
+	<h1>site:{{site}}</h1>
+	<h1>url:{{url}}</h1>
+	<h1>details():{{details()}}</h1>
+	<button @click="doAlert">alert url</button>
+</div>
+
+<script type="text/javascript">
+	var vm = new Vue({
+		el:'#vue_det',
+		data:{
+			site:'菜鸟',
+			url:'tools.com',
+		},
+		methods:{
+			details:function(){
+				return this.site + '-简单小公举';
+			},
+			doAlert:function(){
+				alert(this.url);
+				this.url = 'clicked';
+			}
+		}
+	})
+</script>
+
+</body>
+</html>

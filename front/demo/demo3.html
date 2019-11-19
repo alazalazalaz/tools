@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>tools</title>
+	<script src="../static/vue.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+	<h1>v-if v-bind:href(属性)</h1>
+	<div v-if="seen">
+		<p>现在你看到我了</p>
+	</div>
+	<div v-else>看不到咯</div>
+	<input v-model="seen">
+	<a v-bind:href="url">百度</a>
+</div>
+
+<script type="text/javascript">
+	var vm = new Vue({
+		el:'#app',
+		data:{
+			seen:true,
+			url:'http://www.baidu.com'
+		}
+	})
+</script>
+
+</body>
+</html>

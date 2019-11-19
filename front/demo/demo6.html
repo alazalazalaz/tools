@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>tools</title>
+	<script src="../static/vue.min.js"></script>
+</head>
+<style type="text/css">
+.red{
+	background-color: red
+}
+.bigFont{
+	font-size: 20px
+}
+
+</style>
+<body>
+
+<div id="app">
+	<h1>绑定class放对象，v-bind:class="classObject"或者v-bind:class="{key:value...}"
+	绑定class时直接放一个对象，key为class名(css样式)，value为是否显示</h1>
+	<h1>绑定class放数组，v-bind:class="[c1,c2]"</h1>
+	<div>绑定对象</div>
+	<div v-bind:class="{red:isShowRed, bigFont:isShowBigFont}">啦啦啦啦</div>
+
+</div>
+
+<script type="text/javascript">
+	var vm = new Vue({
+		el:'#app',
+		data:{
+			isShowRed:true,
+			isShowBigFont:true,
+			c1:'red',
+			c2:'bigFont'
+		}
+	})
+</script>
+
+</body>
+</html>
