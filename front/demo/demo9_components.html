@@ -24,24 +24,24 @@
 	})
 
 	//局部组件
-	var part={
-		template:'<h2>局部组件，作用域只有父模板22222222</h2>'
-	}
+	const part = {
+		template: '<h2>局部组件，作用域只有父模板22222222</h2>'
+	};
 
-	var app = new Vue({
-		el:'#app',
+	const app = new Vue({
+		el: '#app',
 		//局部模板只能在父模板使用
-		components:{
-			'part-components':part
+		components: {
+			'part-components': part
 		}
-	})
+	});
 
-	var baiduobj = new Vue({
-		el:"#baidu",
-		components:{
-			'part-components':part
+	const baiduobj = new Vue({
+		el: "#baidu",
+		components: {
+			'part-components': part
 		}
-	})
+	});
 </script>
 
 

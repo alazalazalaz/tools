@@ -16,22 +16,22 @@
 </div>
 
 <script type="text/javascript">
-	var vm = new Vue({
-		el:'#vue_det',
-		data:{
-			site:'菜鸟',
-			url:'tools.com',
+	const vm = new Vue({
+		el: '#vue_det',
+		data: {
+			site: '菜鸟',
+			url: 'tools.com',
 		},
-		methods:{
-			details:function(){
+		methods: {
+			details: function () {
 				return this.site + '-简单小公举';
 			},
-			doAlert:function(){
+			doAlert: function () {
 				alert(this.url);
 				this.url = 'clicked';
 			}
 		}
-	})
+	});
 </script>
 
 </body>
